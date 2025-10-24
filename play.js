@@ -4,6 +4,8 @@ let computerScore = 0;
 let playerDisplay = document.getElementById("player");
 let computerDisplay = document.getElementById("computer");
 let message = document.getElementById("message");
+let compChoiceDisplay = document.getElementById("compChoice");
+
 
 let rockBtn = document.getElementById("rockBtn");
 let paperBtn = document.getElementById("paperBtn");
@@ -22,6 +24,8 @@ function computerPlay() {
 
 function playRound(playerSelection) {
   let computerSelection = computerPlay();
+  compChoiceDisplay.textContent = computerSelection;
+
 
   if (playerSelection === computerSelection) {
     message.textContent = "It's a tie! You both chose " + playerSelection;
